@@ -7,55 +7,93 @@
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
-         <div>
-            <h1>Wordle Clone</h1>
-            <p>Current Guess:</p>
+        <div id='game' data-current-guess="" data-turn="0">
+             <div>
+                <h1>Wordle Clone</h1>
+                <p>Current Guess:</p>
+            </div>
+            <div id="guess-grid">
+                <div class='guess-row' id="guess-1">
+                    <div class='guess-letter'><p></p></div>
+                    <div class='guess-letter'><p></p></div>
+                    <div class='guess-letter'><p></p></div>
+                    <div class='guess-letter'><p></p></div>
+                    <div class='guess-letter'><p></p></div>
+                </div>
+                <div class='guess-row' id="guess-2">
+                    <div class='guess-letter'><p></p></div>
+                    <div class='guess-letter'><p></p></div>
+                    <div class='guess-letter'><p></p></div>
+                    <div class='guess-letter'><p></p></div>
+                    <div class='guess-letter'><p></p></div>
+                </div>
+                <div class='guess-row' id="guess-3">
+                    <div class='guess-letter'><p></p></div>
+                    <div class='guess-letter'><p></p></div>
+                    <div class='guess-letter'><p></p></div>
+                    <div class='guess-letter'><p></p></div>
+                    <div class='guess-letter'><p></p></div>
+                </div>
+                <div class='guess-row' id="guess-4">
+                    <div class='guess-letter'><p></p></div>
+                    <div class='guess-letter'><p></p></div>
+                    <div class='guess-letter'><p></p></div>
+                    <div class='guess-letter'><p></p></div>
+                    <div class='guess-letter'><p></p></div>
+               </div>
+                <div class='guess-row' id="guess-5">
+                    <div class='guess-letter'><p></p></div>
+                    <div class='guess-letter'><p></p></div>
+                    <div class='guess-letter'><p></p></div>
+                    <div class='guess-letter'><p></p></div>
+                    <div class='guess-letter'><p></p></div>
+                </div>
+                <div class='guess-row' id="guess-6">
+                    <div class='guess-letter'><p></p></div>
+                    <div class='guess-letter'><p></p></div>
+                    <div class='guess-letter'><p></p></div>
+                    <div class='guess-letter'><p></p></div>
+                    <div class='guess-letter'><p></p></div>
+                </div>
+            </div>
+
+            <div id="keyboard">
+                <div class="key-row">
+                    <button class="key letter-key">Q</button>
+                    <button class="key letter-key">W</button>
+                    <button class="key letter-key">E</button>
+                    <button class="key letter-key">R</button>
+                    <button class="key letter-key">T</button>
+                    <button class="key letter-key">Y</button>
+                    <button class="key letter-key">U</button>
+                    <button class="key letter-key">I</button>
+                    <button class="key letter-key">O</button>
+                    <button class="key letter-key">P</button>
+                </div>
+                <div class="key-row">
+                    <button class="key letter-key">A</button>
+                    <button class="key letter-key">S</button>
+                    <button class="key letter-key">D</button>
+                    <button class="key letter-key">F</button>
+                    <button class="key letter-key">G</button>
+                    <button class="key letter-key">H</button>
+                    <button class="key letter-key">J</button>
+                    <button class="key letter-key">K</button>
+                    <button class="key letter-key">L</button>
+                </div>
+                <div class="key-row">
+                    <button class="key special-key">ENTER</button>
+                    <button class="key letter-key">Z</button>
+                    <button class="key letter-key">X</button>
+                    <button class="key letter-key">C</button>
+                    <button class="key letter-key">V</button>
+                    <button class="key letter-key">B</button>
+                    <button class="key letter-key">N</button>
+                    <button class="key letter-key">M</button>
+                    <button class="key special-key"><</button>
+                </div>
+            </div>
         </div>
-        <div id="guess-grid">
-            <div class='guess-row' id="guess-1">
-                <div class='guess-letter'><p></p></div>
-                <div class='guess-letter'><p></p></div>
-                <div class='guess-letter'><p></p></div>
-                <div class='guess-letter'><p></p></div>
-                <div class='guess-letter'><p></p></div>
-            </div>
-            <div class='guess-row' id="guess-2">
-                <div class='guess-letter'><p></p></div>
-                <div class='guess-letter'><p></p></div>
-                <div class='guess-letter'><p></p></div>
-                <div class='guess-letter'><p></p></div>
-                <div class='guess-letter'><p></p></div>
-            </div>
-            <div class='guess-row' id="guess-3">
-                <div class='guess-letter'><p></p></div>
-                <div class='guess-letter'><p></p></div>
-                <div class='guess-letter'><p></p></div>
-                <div class='guess-letter'><p></p></div>
-                <div class='guess-letter'><p></p></div>
-            </div>
-            <div class='guess-row' id="guess-4">
-                <div class='guess-letter'><p></p></div>
-                <div class='guess-letter'><p></p></div>
-                <div class='guess-letter'><p></p></div>
-                <div class='guess-letter'><p></p></div>
-                <div class='guess-letter'><p></p></div>
-            </div>
-            <div class='guess-row' id="guess-5">
-                <div class='guess-letter'><p></p></div>
-                <div class='guess-letter'><p></p></div>
-                <div class='guess-letter'><p></p></div>
-                <div class='guess-letter'><p></p></div>
-                <div class='guess-letter'><p></p></div>
-            </div>
-            <div class='guess-row' id="guess-6">
-                <div class='guess-letter'><p></p></div>
-                <div class='guess-letter'><p></p></div>
-                <div class='guess-letter'><p></p></div>
-                <div class='guess-letter'><p></p></div>
-                <div class='guess-letter'><p></p></div>
-            </div>
-        </div>
-        <div id="keyboard">
-        </div>
+       <script src='js/scripts.js'></script> 
     </body>
 </html>

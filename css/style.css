@@ -1,3 +1,9 @@
+#game{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .guess-letter{
     border: solid; 
     height: 50px; 
@@ -8,3 +14,22 @@
 .guess-row{
     display: flex; 
 }
+
+.key-row{
+    display: flex;
+    justify-content: center;
+}
+
+.key{
+    height: 58px;
+    margin: 2px;
+}
+
+.letter-key{
+    width: 43px;
+}
+
+.special-key{
+    width: 65px;
+}
+
