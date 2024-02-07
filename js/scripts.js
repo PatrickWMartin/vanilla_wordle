@@ -27,6 +27,7 @@ function enterClick(){
         document.getElementById(`guess-${turn}`).classList.add('past');
         let letters = document.getElementById(`guess-${turn}`).children;
         for (let i = 0; i < letters.length; i++){
+            letters[i].classList.add("reveal");
             if (letters[i].innerText == solution[i]){
                 letters[i].classList.add("correct");
             } else if (solution.includes(letters[i].innerText)){
@@ -35,7 +36,6 @@ function enterClick(){
                 letters[i].classList.add('wrong');
                 document.getElementById(letters[i].innerText).classList.add('wrong');
             }
-            letters[i].classList.add("reveal");
             
         }
         turn+=1 

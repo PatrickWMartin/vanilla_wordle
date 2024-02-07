@@ -41,15 +41,15 @@ body{
 }
 
 .correct{
-    background-color: #6aaa64;
+    --background-color: #6aaa64;
 }
 
 .somewhere-else{
-    background-color: #c9b458;
+    --background-color: #c9b458;
 }
 
 .wrong{
-    background-color: #787c7e;
+    --background-color: #787c7e;
 }
 
 .past{
@@ -74,11 +74,17 @@ body{
 @keyframes flip{
     0% {    
         transform: rotateX(0);
+        background-color: white;
+        color: black;
     }
     55%{
-        transform: rotateX(90deg)
+        transform: rotateX(90deg);
+        background-color: white;
+        color: black;
+
     }
     100% {    
         transform: rotateX(0);
+        background: var(--background-color);
     }
 }
