@@ -45,7 +45,7 @@ function enterClick(){
                 letters[i].classList.add('somewhere-else');
             }else{
                 letters[i].classList.add('wrong');
-                document.getElementById(letters[i].innerText).classList.add('wrong');
+                document.getElementById(letters[i].innerText).classList.add('wrong-key');
             }
             
         }
