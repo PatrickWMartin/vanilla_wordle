@@ -1,6 +1,7 @@
 body{
     font-family: 'Libre Franklin', sans-serif;
 }
+
 #game{
     display:flex;
     flex-direction: column;
@@ -30,6 +31,9 @@ body{
 .key{
     height: 58px;
     margin: 2px;
+    border: none;
+    background-color: #d3d6da;
+    border-radius: 4px;
 }
 
 .letter-key{
