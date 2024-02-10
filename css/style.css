@@ -1,13 +1,14 @@
 body{
     font-family: 'Libre Franklin', sans-serif;
 }
-
+/*full game board*/
 #game{
     display:flex;
     flex-direction: column;
     align-items: center;
 }
 
+/*guess grid styles*/
 .guess-letter{
     display: flex;
     justify-content: center;
@@ -23,6 +24,7 @@ body{
     display: flex; 
 }
 
+/*keyboard styles*/
 .key-row{
     display: flex;
     justify-content: center;
@@ -44,6 +46,18 @@ body{
     width: 65px;
 }
 
+.wrong-key{
+    background-color: #787c7e;
+}
+
+.right-key{
+    background-color: #6aaa64;
+}
+.somewhere-key{
+    background-color: #c9b458;
+}
+
+/*animation styles*/
 .correct{
     --background-color: #6aaa64;
 }
@@ -56,13 +70,11 @@ body{
     --background-color: #787c7e;
 }
 
-.wrong-key{
-    background-color: #787c7e;
-}
 
 .past{
     color: white;    
 }
+
 .reveal{
     animation: flip 1s forwards;
 }

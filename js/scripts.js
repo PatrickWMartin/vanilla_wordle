@@ -38,11 +38,14 @@ function enterClick(){
         document.getElementById(`guess-${turn}`).classList.add('past');
         let letters = document.getElementById(`guess-${turn}`).children;
         for (let i = 0; i < letters.length; i++){
+            document.getElementById(letters[i].innerText).classList.add('past');
             letters[i].classList.add("reveal");
             if (letters[i].innerText == solution[i]){
                 letters[i].classList.add("correct");
+                document.getElementById(letters[i].innerText).classList.add('right-key');
             } else if (solution.includes(letters[i].innerText)){
                 letters[i].classList.add('somewhere-else');
+                document.getElementById(letters[i].innerText).classList.add('somewhere-key');
             }else{
                 letters[i].classList.add('wrong');
                 document.getElementById(letters[i].innerText).classList.add('wrong-key');
